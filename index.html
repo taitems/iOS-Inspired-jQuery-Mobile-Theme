@@ -1,0 +1,309 @@
+
+<!DOCTYPE html> 
+<html> 
+	<head> 
+	<meta charset="utf-8" /> 
+	<title>iOS Inspired</title> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" /> 
+	<link rel="stylesheet" href="ios_inspired/styles.css" />
+	<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script> 
+	<script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script> 
+	<script type="text/javascript">
+					
+					
+		// all dialog buttons should close their parent dialog
+		$(".ui-dialog button").live("click", function() {
+		
+			$("[data-role='dialog']").dialog("close");
+		
+		});
+	
+	</script>
+</head> 
+<body> 
+ 
+<div data-role="page"> 
+ 
+	<div data-role="header"> 
+		<h1>Page Header</h1>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+		<p>Welcome to the iOS-Inspired jQuery Mobile theme by <a href="http://twitter.com/taitems">@taitems</a>. Feel free to have a look around and report and bugs to the GitHub issues page.</p> 
+ 
+			
+		<ul data-role="listview" data-inset="true"> 
+			<li><a href="#headers">Header Bars</a></li> 
+			<li><a href="#headerButtons">Header Buttons</a></li> 
+			<li><a href="#formElements">Form Elements</a></li> 
+			<li><a href="#listViews">List Views</a></li> 
+			<li><a href="#dialogs">Dialogs</a></li> 
+			<!--<li><a href="api-pages.html">API documentation</a></li>--> 
+		</ul> 
+			
+		<br />
+			
+		<br />
+ 
+		</div><!-- /ui-body wrapper -->	
+</div><!-- /page --> 
+  
+<div data-role="page" id="formElements">
+ 
+	<div data-role="header">
+		<h1>Form Elements</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-rel="back" data-icon="arrow-l" data-theme="a">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+		
+		<div data-role="fieldcontain">
+		
+			<label>Some Fields and Inputs:</label>
+			
+			<br /><br />
+	
+			<input type="range" />
+			
+			<br /><br />
+			
+			<input type="search" />
+			
+			<br /><br />
+			
+			<input type="email" />
+			
+			<br />
+		
+		</div>
+		
+		<div data-role="fieldcontain">
+			<label for="slider">Select slider:</label>
+			<select name="slider" id="slider" data-role="slider">
+				<option value="off">OFF</option>
+				<option value="on">ON</option>
+			</select> 
+		</div>
+		
+		<div data-role="fieldcontain">
+			<fieldset data-role="controlgroup" data-type="horizontal">
+				<legend>Choose a pet:</legend>
+					<input type="radio" name="radio-choice-1" id="radio-choice-1" value="choice-1" checked="checked" />
+					<label for="radio-choice-1">Cat</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-2" value="choice-2"  />
+					<label for="radio-choice-2">Dog</label>
+
+					<input type="radio" name="radio-choice-1" id="radio-choice-3" value="choice-3"  />
+					<label for="radio-choice-3">Hampster</label>
+			</fieldset>
+		</div>
+		
+		<button disabled=>Inactive Button</button>
+		
+		<button>Active Button</button>
+	
+	</div>
+	
+</div>
+  
+<div data-role="page" id="listViews">
+ 
+	<div data-role="header">
+		<h1>List Example</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-rel="back" data-icon="arrow-l" data-theme="a">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+		
+		<ul data-role="listview"> 
+			<li data-role="list-divider">Divider</li>
+			<li><a href="#">Anatomy of a page</a></li> 
+			<li><a href="#">Page transitions</a></li> 
+			<li><a href="#">Dialogs</a></li> 
+			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
+			<li><a href="#">Link format examples</a></li> 
+			<li><a href="#">Theming pages</a></li>
+			<li><a href="#">Anatomy of a page</a></li> 
+			<li><a href="#">Page transitions</a></li> 
+			<li><a href="#">Dialogs</a></li> 
+			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
+			<li><a href="#">Link format examples</a></li> 
+			<li><a href="#">Theming pages</a></li>
+			<li><a href="#">Anatomy of a page</a></li> 
+			<li><a href="#">Page transitions</a></li> 
+			<li><a href="#">Dialogs</a></li> 
+			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
+			<li><a href="#">Link format examples</a></li> 
+			<li><a href="#">Theming pages</a></li>
+			<li><a href="#">Anatomy of a page</a></li> 
+			<li><a href="#">Page transitions</a></li> 
+			<li><a href="#">Dialogs</a></li> 
+			<li><a href="#">Navigation: Ajax, hashes &amp; history</a></li> 
+			<li><a href="#">Link format examples</a></li> 
+			<li><a href="#">Theming pages</a></li>
+		</ul> 
+		
+	</div>
+		
+</div>
+  
+<div data-role="page" id="headers"> 
+ 
+	<div data-role="header">
+		<h1>Headers</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-rel="back" data-icon="arrow-l" data-theme="a">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+	
+		<p>
+			The default is the blue you see above. Try previewing the black one below!
+		</p>
+		
+		<a href="#blackHeader" data-role="button">Black Bar</a>
+	
+	</div>
+		
+</div>
+  
+<div data-role="page" id="blackHeader" data-theme="b"> 
+ 
+	<div data-role="header" data-theme="b">
+		<h1>Black Header</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-b" data-rel="back" data-icon="arrow-l" data-theme="b">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+	
+		<p>
+			Hey presto, this is the black themed header!
+		</p>
+	
+	</div>
+		
+</div>
+  
+<div data-role="page" id="headerButtons"> 
+ 
+	<div data-role="header">
+		<h1>Header Buttons</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-rel="back" data-icon="arrow-l" data-theme="a">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+	
+		<p>
+			The various styled buttons you can place in a header:
+		</p>
+		
+		<div data-role="header" data-position="inline">
+			<h1>Page Title</h1>
+			<a href="#" data-theme="a">Edit</a>
+		</div>
+		
+		<br />
+		
+		<div data-role="header" data-position="inline">
+			<h1>Page Title</h1>
+			<a href="#" data-theme="b">Black</a>
+		</div>
+		
+		<br />
+		
+		<div data-role="header" data-position="inline">
+			<h1>Page Title</h1>
+			<a href="#" data-theme="c">Delete</a>
+		</div>
+	
+	</div>
+		
+</div>
+
+<div data-role="page" id="allDialogExample"> 
+ 
+	<div data-role="content"> 
+		<button data-theme="e">Button Style E</button>
+		<button data-theme="d">Button Style D</button>
+		<button data-theme="c">Button Style C</button>
+		<button data-theme="b">Button Style B</button>
+		<button data-theme="a">Button Style A</button>
+	</div>
+	
+</div>
+
+<div data-role="page" id="deleteDialogExample"> 
+ 
+	<div data-role="content"> 
+		<button data-theme="e">Delete Draft</button>
+		<button data-theme="a">Save Draft</button>
+		<button data-theme="b">Cancel</button>
+	</div>
+	
+</div>
+
+<div data-role="page" id="postDialogExample"> 
+ 
+	<div data-role="content"> 
+		<button data-theme="a">Post to Twitter</button>
+		<button data-theme="a">Post to Facebook</button>
+		<button data-theme="a">Post to YouTube</button>
+		<button data-theme="b">Cancel</button>
+	</div>
+	
+</div>
+  
+<div data-role="page" id="dialogs">
+ 
+	<div data-role="header">
+		<h1>Dialogs</h1>
+		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-a" data-rel="back" data-icon="arrow-l" data-theme="a">
+			<span class="ui-btn-inner ui-btn-corner-all">
+				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
+			</span>
+			<span class="ui-btn-text">Back</span>
+		</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+	
+		<a href="#allDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">All the options</a>
+	
+		<a href="#deleteDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">Delete Example</a>
+	
+		<a href="#postDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">Post Something</a>
+	
+	</div>
+		
+</div>
+ 
+
+</body> 
+</html> 
