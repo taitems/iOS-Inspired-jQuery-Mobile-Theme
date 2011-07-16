@@ -31,7 +31,7 @@
 	</div><!-- /header --> 
  
 	<div data-role="content"> 
-		<p>Welcome to the iOS-Inspired jQuery Mobile theme by <a href="http://twitter.com/taitems">@taitems</a>. Feel free to have a look around and report and bugs to the GitHub issues page.</p> 
+		<p>Welcome to the iOS-Inspired jQuery Mobile theme by <a href="http://twitter.com/taitems" target="_blank">@taitems</a>. Feel free to have a look around and report and bugs to the <a href="https://github.com/taitems/iOS-Inspired-jQuery-Mobile-Theme/issues" target="_blank">GitHub issues page</a>.</p> 
  
 			
 		<ul data-role="listview" data-inset="true"> 
@@ -42,7 +42,7 @@
 			<li><a href="#dialogs">Dialogs</a></li> 
 			<!--<li><a href="api-pages.html">API documentation</a></li>--> 
 		</ul> 
-			
+					
 		<br />
 			
 		<br />
@@ -175,32 +175,20 @@
 	<div data-role="content"> 
 	
 		<p>
-			The default is the blue you see above. Try previewing the black one below!
+			The default bar is the blue, but you can also use the black by specifying <em>data-theme="b"</em>.
 		</p>
 		
-		<a href="#blackHeader" data-role="button">Black Bar</a>
-	
-	</div>
+		<div data-role="header" data-position="inline">
+			<h1>Blue Bar</h1>
+			<a href="#" data-theme="a">Button</a>
+		</div>
 		
-</div>
-  
-<div data-role="page" id="blackHeader" data-theme="b"> 
- 
-	<div data-role="header" data-theme="b">
-		<h1>Black Header</h1>
-		<a href="#" class="ui-btn-left ui-btn ui-btn-icon-left ui-btn-corner-all ui-shadow ui-btn-up-b" data-rel="back" data-icon="arrow-l" data-theme="b">
-			<span class="ui-btn-inner ui-btn-corner-all">
-				<span class="ui-icon ui-icon-arrow-l ui-icon-shadow"></span>
-			</span>
-			<span class="ui-btn-text">Back</span>
-		</a>
-	</div><!-- /header --> 
- 
-	<div data-role="content"> 
-	
-		<p>
-			Hey presto, this is the black themed header!
-		</p>
+		<br />
+		
+		<div data-role="header" data-theme="b" data-position="inline">
+			<h1>Black Bar</h1>
+			<a href="#" data-theme="b">Button</a>
+		</div>
 	
 	</div>
 		
@@ -241,6 +229,13 @@
 		<div data-role="header" data-position="inline">
 			<h1>Page Title</h1>
 			<a href="#" data-theme="c">Delete</a>
+		</div>
+		
+		<br />
+		
+		<div data-role="header" data-position="inline">
+			<h1>Page Title</h1>
+			<a href="#" data-theme="d">Done</a>
 		</div>
 	
 	</div>
