@@ -586,7 +586,9 @@ input.ui-input-text, .ui-input-search {
 /* === CUSTOM HEADER BUTTONS === */
 .ui-header .ui-btn {
 	-webkit-border-radius: 5px;
-	-webkit-box-shadow: 0 1px 1px rgba(0,0,0,0.5) inset, 0 1px 0 rgba(255,255,255,0.36);	
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
 	border-color: -webkit-gradient(
 		linear,
 		left bottom,
@@ -625,9 +627,9 @@ input.ui-input-text, .ui-input-search {
 }
 .ui-header .ui-btn-up-b, .ui-header .ui-btn-hover-b  {
 	border-color: #000;
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
 	background: -webkit-gradient(
 		linear,
 		left top,
@@ -640,9 +642,9 @@ input.ui-input-text, .ui-input-search {
 }
 .ui-header .ui-btn-up-c, .ui-header .ui-btn-hover-c  {
 	border-color: #451c1b;
-	-webkit-box-shadow: none !important;
-	-moz-box-shadow: none !important;
-	box-shadow: none !important;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
 	background: -webkit-gradient(
 		linear,
 		left top,
@@ -653,7 +655,26 @@ input.ui-input-text, .ui-input-search {
 		color-stop(1, #c92a29)
 	) !important;
 }
-.ui-header .ui-btn-up-c .ui-btn-text, .ui-header .ui-btn-hover-c  .ui-btn-text {
+.ui-header .ui-btn-up-c .ui-btn-text, .ui-header .ui-btn-hover-c .ui-btn-text {
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
+}
+.ui-header .ui-btn-up-d, .ui-header .ui-btn-hover-d  {
+	border-color: #375074;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	box-shadow: 0 1px 0 rgba(255,255,255,0.36), 0 1px 0 rgba(0,0,0,0.25) inset !important;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(0, #376fe0),
+		color-stop(0.5, #376fe0),
+		color-stop(0.51, #2361de),
+		color-stop(1, #2463de)
+	) !important;
+}
+.ui-header .ui-btn-up-d .ui-btn-text, .ui-header .ui-btn-hover-d .ui-btn-text {
 	color: #FFF;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
