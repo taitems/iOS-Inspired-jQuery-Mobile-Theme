@@ -354,108 +354,41 @@ div.ui-btn .ui-btn-inner {
 }
 
 /* === BACK BUTTON === */
-a[data-rel='back'] {
-    position: relative; 
-    height: 26px; 
-    width: 45px; 
-    border: 1px solid rgba(0,0,0,0.4);  
-    -webkit-border-radius: 5px; 
-    background: -webkit-gradient(linear, left top, left bottom, from(#9fb3cc), to(#5b80ab), color-stop(0.5, #6b8bb2), color-stop(0.51, #597eaa)) !important; 
-    -webkit-box-shadow: 0 1px 0 rgba(255,255,255, 0.25), inset 0 1px 1px rgba(0,0,0, 0.2);
+a[data-rel='back'], .ui-header a[data-rel='back'] {
+	background: transparent url(images/backButtonSprite.png) 0 0 no-repeat !important;
+		-webkit-box-shadow: none !important; 
+		-moz-box-shadow: none !important; 
+		box-shadow: none !important;
+			-webkit-border-radius: 0 !important;
+			-moz-border-radius: 0 !important;
+			border-radius: 0 !important;
+	border: 0 none !important;
+	height: 30px;
 }
 
-a[data-rel='back'] > .ui-btn-inner {
-    position: absolute; 
-    z-index: 1; 
-    top: 6px; 
-    left: -16px; 
-    -webkit-transform: rotate(51deg);
-	padding: 30px 0 0 0 !important;
-	width: 100%;
-	border-top: 0 none;
-}
-
-a[data-rel='back'] .ui-btn-text {
-    position: absolute; 
-    z-index: 2; 
-    top: 6px; 
-    left: 9px; 
-    margin: 0; 
-    padding: 0; 
-    font-size: 12px; 
-    font-weight: bold; 
-    color: #fff; 
-    text-shadow: 0 -1px 0 rgba(0,0,0, 0.4);
+a[data-rel='back'] .ui-btn-inner {
+	background: transparent url(images/backButtonSprite.png) right 0 no-repeat !important;
+	margin: 0 0 0 15px;
+	padding: 0 8px 0 0 !important;
+	height: 30px;
+	line-height: 30px;
+		-webkit-box-shadow: none !important; 
+		-moz-box-shadow: none !important; 
+		box-shadow: none !important;
 }
 
 a[data-rel='back'] .ui-icon {
-    -webkit-transform: skew(15deg);
-	left: -12px;
-    display: block; 
-    width: 15px; 
-    height: 16px; 
-    background: -webkit-gradient(linear, left top, right bottom, from(#9fb3cc), to(#5b80ab), color-stop(0.5, #6b8bb2), color-stop(0.51, #597eaa));   
-    -webkit-border-radius: 1px; 
-    border: 1px solid rgba(0,0,0, 0.4); 
-    border-right: 0; 
-    border-top: 0;
-    -webkit-box-shadow: 0 1px 0 rgba(255,255,255, 0.25);
-}
-
-a[data-rel='back'].ui-btn-down-b {
-    background: -webkit-gradient(linear, left top, left bottom, from(#89a0be), to(#4a6c9b), color-stop(0.5, #486a9a), color-stop(0.51, #5877a2)) !important; 
-}
-a[data-rel='back'].ui-btn-down-b .ui-icon {
-    background: -webkit-gradient(linear, left top, right bottom, from(#89a0be), to(#4a6c9b), color-stop(0.5, #486a9a), color-stop(0.51, #5877a2)) !important; 
+	display: none;
 }
 
 /* === BLACK - BACK BUTTON === */
 .ui-bar-b a[data-rel='back'] {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0, #6a6a6a),
-		color-stop(0.5, #313131),
-		color-stop(0.51, #000000),
-		color-stop(1, #000000)
-	) !important;
+	background-position: 0 -30px !important;
+}
+.ui-bar-b a[data-rel='back'] .ui-btn-inner {
+	background-position: right -30px !important;
 }
 
-.ui-bar-b a[data-rel='back'] .ui-icon {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		right bottom,
-		color-stop(0, #6a6a6a),
-		color-stop(0.5, #313131),
-		color-stop(0.51, #000000),
-		color-stop(1, #000000)
-	) !important;
-}
-
-.ui-bar-b a[data-rel='back'].ui-btn-down-b {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		left bottom,
-		color-stop(0, #6a6a6a),
-		color-stop(0.5, #313131),
-		color-stop(0.51, #000000),
-		color-stop(1, #000000)
-	) !important;
-}
-.ui-bar-b a[data-rel='back'].ui-btn-down-b .ui-icon {
-	background: -webkit-gradient(
-		linear,
-		left top,
-		right bottom,
-		color-stop(0, #6a6a6a),
-		color-stop(0.5, #313131),
-		color-stop(0.51, #000000),
-		color-stop(1, #000000)
-	) !important;
-}
 
 /* === TOGGLE === */
 .ui-slider-switch {
