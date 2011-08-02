@@ -611,3 +611,58 @@ input.ui-input-text, .ui-input-search {
 	color: #FFF;
 	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
+
+
+/* === FOOTER BAR === */
+.ui-footer {
+	border-color: #0d0d0d;
+	background: -webkit-gradient(
+		linear,
+		left top,
+		left bottom,
+		color-stop(1, #000000),
+		color-stop(0.51, #000000),
+		color-stop(0.5, #151515),
+		color-stop(0, #2d2d2d)
+	);
+}
+.ui-footer .ui-btn {
+	border: 0 none;
+	background: transparent;
+}
+.ui-footer .ui-btn-active {
+	-webkit-border-radius: 4px !important;
+	border-radius: 4px !important;
+	background: none rgba(255,255,255,0.14);
+}
+.ui-footer .ui-btn-inner {
+	border-color: #434343;
+	padding-top: 40px !important;
+}
+.ui-footer .ui-btn-text {
+	font-size: 10px;
+	text-shadow: 0 none;
+}
+.ui-footer .ui-icon {
+	width: 32px;
+	height: 32px;
+	margin-left: -16px;
+}
+	#tabA .ui-icon {
+		background: url(images/tabSprite.png) 0 0 no-repeat;
+	}
+		#tabA.ui-btn-active .ui-icon {
+			background: url(images/tabSprite.png) -32px 0 no-repeat;
+		}
+	#tabB .ui-icon {
+		background: url(images/tabSprite.png) 0 -32px no-repeat;
+	}
+		#tabB.ui-btn-active .ui-icon {
+			background: url(images/tabSprite.png) -32px -32px no-repeat;
+		}
+	#tabC .ui-icon {
+		background: url(images/tabSprite.png) 0 -64px no-repeat;
+	}
+		#tabC.ui-btn-active .ui-icon {
+			background: url(images/tabSprite.png) -32px -64px no-repeat;
+		}
