@@ -51,11 +51,15 @@
 	border: 0 none;
 }
 
+.ui-header .ui-title {
+	text-shadow: 0 -1px 0 #4c596a !important;
+}
+
 /* === LIST VIEWS === */
 .ui-listview {
-	-webkit-box-shadow: none;
-	-moz-box-shadow: none;
-	box-shadow: none;
+	-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.5);
+	box-shadow: 0 1px 0 rgba(255,255,255,0.5);
 }
 
 .ui-listview, .ui-listview li {
@@ -509,7 +513,12 @@ input.ui-input-text, .ui-input-search {
 	width: 19px;
 	height: 19px;
 	border: none;
-	box-shadow: none;
+	-moz-box-shadow: none !important;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	-moz-border-radius: 0;
+	-webkit-border-radius: 0;
+	border-radius: 0;
 	margin-top: -9px !important;
 }
 .ui-input-clear * {
@@ -666,3 +675,20 @@ input.ui-input-text, .ui-input-search {
 		#tabC.ui-btn-active .ui-icon {
 			background: url(images/tabSprite.png) -32px -64px no-repeat;
 		}
+		
+		
+/* === RETINA DEVICE FIXES === */
+@media (-webkit-min-device-pixel-ratio : 1.5), (min-device-pixel-ratio : 1.5) {
+	.ui-listview .ui-icon-arrow-r {
+		background-image: url(images/arrow_right@2x.png) !important;
+		background-size: 9.5px 14px;
+	}
+	a[data-rel='back'], .ui-header a[data-rel='back'], a[data-rel="back"] .ui-btn-inner {
+		background-image: url(images/backButtonSprite@2x.png) !important;
+		background-size: 500px 60px;
+	}
+	.ui-input-clear {
+		background-position: right 0;
+		background-size: 100px 250px;
+	}
+}		
