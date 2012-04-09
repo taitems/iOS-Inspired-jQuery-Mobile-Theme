@@ -5,27 +5,20 @@
 	<title>iOS Inspired</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.css" /> 
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.css" />
 	<link rel="stylesheet" href="ios_inspired/styles.css" />
-	<script src="http://code.jquery.com/jquery-1.6.1.min.js"></script> 
-	<script src="http://code.jquery.com/mobile/1.0b1/jquery.mobile-1.0b1.min.js"></script> 
-	<script type="text/javascript">
-					
-					
+	<script src="http://code.jquery.com/jquery-1.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.0.1/jquery.mobile-1.0.1.min.js"></script>
+	<script>
 		// all dialog buttons should close their parent dialog
-		$(".ui-dialog button").live("click", function() {
-		
-			$("[data-role='dialog']").dialog("close");
-		
+		$(".ui-dialog button").live("click", function() {		
+			$("[data-role='dialog']").dialog("close");		
 		});
-	
 	</script>
 	<style>
-	
 		#footerTabs {
 			background: #FFF -webkit-radial-gradient(circle, #FFF, #dee2e4);
 		}
-	
 	</style>
 </head> 
 <body> 
@@ -108,9 +101,13 @@
 			</fieldset>
 		</div>
 		
-		<button disabled=>Inactive Button</button>
-		
-		<button>Active Button</button>
+		<a disabled="disabled" data-role="button">Inactive &lt;a&gt;</a>
+
+		<a data-role="button">Active &lt;a&gt;</a>
+
+		<button disabled="disabled">Inactive &lt;button&gt;</button>
+
+		<button>Active &lt;button&gt;</button>
 	
 	</div>
 	

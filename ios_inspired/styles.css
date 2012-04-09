@@ -222,6 +222,10 @@ div.ui-btn .ui-btn-inner {
 	box-shadow: none;
 	background-clip: padding-box;
 }
+.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner {
+	background: #FFF !important;
+	box-shadow: none;
+}
 
 .ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner .ui-collapsible-heading-toggle{
 	background: none;
@@ -237,8 +241,11 @@ div.ui-btn .ui-btn-inner {
 .ui-page:not(.ui-dialog) .ui-content .ui-btn.ui-disabled:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) {
 	opacity: 1;
 }
-.ui-page:not(.ui-dialog) .ui-content .ui-btn.ui-disabled:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-text {
-	color: #aaaaaa;
+.ui-btn[disabled] {
+	cursor: default;
+}
+.ui-btn[disabled] .ui-btn-text, .ui-btn.ui-disabled .ui-btn-text {
+	color: #aaaaaa !important;
 }
 
 
@@ -249,6 +256,7 @@ div.ui-btn .ui-btn-inner {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
+	max-width: 100%; /* fixes issue #24 */
 	padding: 0.75em 0;
 	margin: 0;
 	border-top: 1px solid #45484d;
@@ -660,6 +668,13 @@ input.ui-input-text, .ui-input-search {
 	width: 32px;
 	height: 32px;
 	margin-left: -16px;
+}
+/* fixes issue #25 */
+.ui-footer .ui-icon-shadow {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	-o-box-shadow: none;
+	box-shadow: none;
 }
 	#tabA .ui-icon {
 		background: url(images/tabSprite.png) 0 0 no-repeat;
