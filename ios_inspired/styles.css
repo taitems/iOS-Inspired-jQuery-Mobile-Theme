@@ -223,7 +223,7 @@ div.ui-btn .ui-btn-inner {
 	background-clip: padding-box;
 }
 
-.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner {
+.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner .ui-collapsible-heading-toggle{
 	background: none;
 	padding: 15px 0 !important;
 }
