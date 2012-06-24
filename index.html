@@ -8,24 +8,28 @@
 	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
 	<link rel="stylesheet" href="ios_inspired/styles.css" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<script>
 		// all dialog buttons should close their parent dialog
 		$(".ui-dialog button").live("click", function() {		
 			$("[data-role='dialog']").dialog("close");		
 		});
+		$(document).on("mobileinit", function(){
+		  $.mobile.defaultPageTransition = "slide";
+		});
 	</script>
+	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
 	<style>
 		#footerTabs {
 			background: #FFF -webkit-radial-gradient(circle, #FFF, #dee2e4);
 		}
 	</style>
+
 </head> 
 <body> 
  
 <div data-role="page"> 
  
-	<div data-role="header"> 
+	<div data-role="header" data-position="fixed"> 
 		<h1>Page Header</h1>
 	</div><!-- /header --> 
  
@@ -52,7 +56,7 @@
   
 <div data-role="page" id="formElements">
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Form Elements</h1>
 		<a href="#" data-rel="back" data-theme="a">Back</a>
 	</div><!-- /header --> 
@@ -115,7 +119,7 @@
   
 <div data-role="page" id="listViews">
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>List Example</h1>
 		<a href="#" data-rel="back" data-theme="a">Back</a>
 	</div><!-- /header --> 
@@ -156,7 +160,7 @@
   
 <div data-role="page" id="headers"> 
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Headers</h1>
 		<a href="#" data-rel="back" data-theme="a">Back</a>
 		</a>
@@ -188,7 +192,7 @@
   
 <div data-role="page" id="headerButtons"> 
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Header Buttons</h1>
 		<a href="#" data-rel="back" data-theme="a">Back</a>
 	</div><!-- /header --> 
@@ -278,7 +282,7 @@
   
 <div data-role="page" id="dialogs">
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Dialogs</h1>
 		<a href="#" data-rel="back" data-theme="a">Back</a>
 	</div><!-- /header --> 
@@ -297,7 +301,7 @@
   
 <div data-role="page" id="footerTabs" data-theme="b">
  
-	<div data-role="header">
+	<div data-role="header" data-position="fixed">
 		<h1>Footer Tabs</h1>
 		<a href="#" data-rel="back">Back</a>
 	</div><!-- /header --> 
