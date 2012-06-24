@@ -13,8 +13,11 @@
 
 /* === HEADER BARS - DEFAULT AND BLACK === */
 .ui-header {
-	border-top: 1px solid #000;
-	border-bottom: 1px solid transparent !important;
+	border: 0 none;
+	padding: 1px 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
 		-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
 		-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
 		box-shadow: 0 1px 0 rgba(255,255,255,0.6) inset, 0 -1px 0 rgba(0,0,0,0.6) inset;
@@ -138,7 +141,7 @@ input.ui-slider-input {
 }
 
 /* === TEXT FIELD === */
-.ui-input-text {
+input.ui-input-text {
 	height: 31px;
 	background-color: #FFF;
 	border: 1px solid #bbbbbb;
@@ -498,6 +501,7 @@ input.ui-input-text, .ui-input-search {
 /* === CUSTOM HEADER BUTTONS === */
 .ui-header .ui-btn {
 	border-color: #375074;
+	top: 6px;
 		-webkit-border-radius: 5px;
 		-moz-border-radius: 5px;
 		border-radius: 5px;
@@ -531,6 +535,10 @@ input.ui-input-text, .ui-input-search {
 			background: -ms-linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* IE10+ */
 			background: linear-gradient(top,  #6a6a6a 0%,#313131 49%,#000000 50%,#000000 100%); /* W3C */
 			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#6a6a6a', endColorstr='#000000',GradientType=0 ); /* IE6-9 */
+}
+.ui-header .ui-btn-up-b .ui-btn-text, .ui-header .ui-btn-hover-b .ui-btn-text {
+	color: #FFF;
+	text-shadow: 0 -1px 0 rgba(0,0,0,0.5);
 }
 .ui-header .ui-btn-up-c, .ui-header .ui-btn-hover-c  {
 	border-color: #451c1b;
@@ -600,7 +608,7 @@ input.ui-input-text, .ui-input-search {
 	font-size: 10px;
 	text-shadow: 0 none;
 }
-.ui-footer .ui-icon {
+.ui-footer .ui-icon-custom.ui-icon {
 	width: 32px;
 	height: 32px;
 	margin-left: -16px;
