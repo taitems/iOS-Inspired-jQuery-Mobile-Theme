@@ -5,8 +5,8 @@
 	<title>iOS Inspired jQuery Mobile Theme</title> 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no"> 	 
 	<meta name="apple-mobile-web-app-capable" content="yes">
-	<link rel="stylesheet"  href="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
-	<link rel="stylesheet" href="ios_inspired/styles.css" />
+	<link href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" rel="stylesheet" />
+	<link href="ios_inspired/styles.css" rel="stylesheet" />
 	<script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 	<script>
 		// all dialog buttons should close their parent dialog
@@ -17,10 +17,14 @@
 		  $.mobile.defaultPageTransition = "slide";
 		});
 	</script>
-	<script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
 	<style>
 		#footerTabs {
 			background: #FFF -webkit-radial-gradient(circle, #FFF, #dee2e4);
+		}
+		.ui-listview sup {
+			font-size: 0.6em;
+			color: #cc0000;
 		}
 	</style>
 
@@ -44,7 +48,7 @@
 			<li><a href="#formElements">Form Elements</a></li> 
 			<li><a href="#listViews">List Views</a></li> 
 			<li><a href="#dialogs">Dialogs</a></li> 
-			<!--<li><a href="api-pages.html">API documentation</a></li>--> 
+			<li><a href="#popups">Popups <sup>New!</sup></a></li> 
 		</ul> 
 					
 		<br />
@@ -105,13 +109,15 @@
 			</fieldset>
 		</div>
 		
-		<a disabled="disabled" data-role="button">Inactive &lt;a&gt;</a>
+		<a disabled="disabled" data-role="button" class="ui-btn-plain">Inactive &lt;a&gt;</a>
 
-		<a data-role="button">Active &lt;a&gt;</a>
+		<a data-role="button" class="ui-btn-plain">Active &lt;a&gt;</a>
 
-		<button disabled="disabled">Inactive &lt;button&gt;</button>
+		<button disabled="disabled" class="ui-btn-plain">Inactive &lt;button&gt;</button>
 
-		<button>Active &lt;button&gt;</button>
+		<button class="ui-btn-plain">Active &lt;button&gt;</button>
+
+		<p><small>Does the above look funny? Consider it a bug in jQuery mobile where the classes from the underling &lt;button&gt; are not being attached to the new DOM</small></p>
 	
 	</div>
 	
@@ -289,11 +295,11 @@
  
 	<div data-role="content"> 
 	
-		<a href="#allDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">All the options</a>
+		<a href="#allDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">All the options</a>
 	
-		<a href="#deleteDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">Delete Example</a>
+		<a href="#deleteDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">Delete Example</a>
 	
-		<a href="#postDialogExample" data-role="button" data-rel="dialog" data-transition="slideup">Post Something</a>
+		<a href="#postDialogExample" class="ui-btn-plain" data-role="button" data-rel="dialog" data-transition="slideup">Post Something</a>
 	
 	</div>
 		
@@ -321,6 +327,38 @@
 			</ul>
 		</div><!-- /navbar -->
 	</div><!-- /footer -->
+		
+</div>
+  
+<div data-role="page" id="popups" data-theme="b">
+ 
+	<div data-role="header" data-position="fixed">
+		<h1>Popups</h1>
+		<a href="#" data-rel="back">Back</a>
+	</div><!-- /header --> 
+ 
+	<div data-role="content"> 
+	
+		<a href="#popupBasic" data-rel="popup" data-role="button" class="ui-btn-plain">Open Popup</a>
+
+		<a href="#popupOverlay" data-rel="popup" data-role="button" class="ui-btn-plain">Open Popup with Overlay</a>
+
+		<a href="#popupiOS" data-rel="popup" data-role="button" class="ui-btn-plain">iOS Style Popup</a>
+
+		<div data-role="popup" data-transition="fade" id="popupBasic">
+			<p>This is a completely basic popup, no options set.<p>
+		</div>
+
+		<div data-role="popup" data-transition="fade" data-overlay-theme="a" id="popupOverlay">
+			<p>This is a completely basic popup, but with an overlay<p>
+		</div>
+
+		<div data-role="popup" data-transition="fade" data-theme="a" data-position-to="window" id="popupiOS">
+			<img src="ios_inspired/images/tick.png">
+			<p>Saved<p>
+		</div>
+	
+	</div>
 		
 </div>
  

@@ -11,6 +11,56 @@
     padding-top: 39px;/* fix for fixed toolbar mode */
 }
 
+
+/* === IN PAGE BUTTON === */
+.ui-btn.ui-btn-plain {
+	padding: 0;
+	background: #FFF;
+	border: 1px solid #bbbbbb;
+	border-radius: 10px;
+	box-shadow: none;
+	background-clip: padding-box;
+}
+.ui-btn.ui-btn-plain .ui-btn-inner {
+	background: #FFF;
+	box-shadow: none;
+	border-radius: 10px;
+}
+.ui-btn.ui-btn-plain .ui-btn-inner .ui-collapsible-heading-toggle {
+	background: none;
+	padding: 15px 0;
+}
+.ui-btn.ui-btn-plain .ui-btn-text {
+	font-weight: bold;
+	font-size: 17px;
+	color: #000;
+	text-shadow: none;
+}
+.ui-btn.ui-btn-plain.ui-disabled {
+	opacity: 1;
+}
+.ui-btn.ui-btn-plain[disabled] {
+	cursor: default;
+}
+.ui-btn.ui-btn-plain[disabled] span, .ui-btn.ui-disabled span {
+	color: #aaaaaa;
+}
+	/* button active */
+	.ui-btn.ui-btn-plain.ui-btn-down-c .ui-btn-inner {
+		background: #008bf5; /* Old browsers */
+		background: -moz-linear-gradient(top,  #008bf5 0%, #0f5be6 100%); /* FF3.6+ */
+		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008bf5), color-stop(100%,#0f5be6)); /* Chrome,Safari4+ */
+		background: -webkit-linear-gradient(top,  #008bf5 0%,#0f5be6 100%); /* Chrome10+,Safari5.1+ */
+		background: -o-linear-gradient(top,  #008bf5 0%,#0f5be6 100%); /* Opera 11.10+ */
+		background: -ms-linear-gradient(top,  #008bf5 0%,#0f5be6 100%); /* IE10+ */
+		background: linear-gradient(to bottom,  #008bf5 0%,#0f5be6 100%); /* W3C */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008bf5', endColorstr='#0f5be6',GradientType=0 ); /* IE6-9 */
+	}
+	.ui-btn.ui-btn-plain.ui-btn-down-c span {
+		color: #FFF;
+		text-shadow: none;
+	}
+
 /* === HEADER BARS - DEFAULT AND BLACK === */
 .ui-header {
 	border: 0 none;
@@ -65,9 +115,17 @@
 	background: #ffffff;
 }
 
-.ui-listview li.ui-btn-active {
-	color: #FFF;
+.ui-listview .ui-btn-down-c {
 	background: #106ce5;
+}
+.ui-listview .ui-btn-down-c a {
+	color: #FFF;
+	text-shadow: none;
+}
+.ui-listview .ui-icon-arrow-r {
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
 }
 
 .ui-listview .ui-li-divider {
@@ -118,13 +176,13 @@ a.ui-slider-handle {
 		-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.75), 0 2px 0 rgba(255,255,255,0.75) inset;
 		box-shadow: 0 1px 3px rgba(0,0,0,0.75), 0 2px 0 rgba(255,255,255,0.75) inset;
 			background: #fafafa; /* Old browsers */
-			background: -moz-linear-gradient(top,  #fafafa 0%, #d4d4d4 100%); /* FF3.6+ */
-			background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fafafa), color-stop(100%,#d4d4d4)); /* Chrome,Safari4+ */
-			background: -webkit-linear-gradient(top,  #fafafa 0%,#d4d4d4 100%); /* Chrome10+,Safari5.1+ */
-			background: -o-linear-gradient(top,  #fafafa 0%,#d4d4d4 100%); /* Opera 11.10+ */
-			background: -ms-linear-gradient(top,  #fafafa 0%,#d4d4d4 100%); /* IE10+ */
-			background: linear-gradient(top,  #fafafa 0%,#d4d4d4 100%); /* W3C */
-			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fafafa', endColorstr='#d4d4d4',GradientType=0 ); /* IE6-9 */
+			background: -moz-linear-gradient(top,  #fafafa 100%, #d4d4d4 0%); /* FF3.6+ */
+			background: -webkit-gradient(linear, left top, left bottom, color-stop(100%,#fafafa), color-stop(0%,#d4d4d4)); /* Chrome,Safari4+ */
+			background: -webkit-linear-gradient(top,  #fafafa 100%,#d4d4d4 0%); /* Chrome10+,Safari5.1+ */
+			background: -o-linear-gradient(top,  #fafafa 100%,#d4d4d4 0%); /* Opera 11.10+ */
+			background: -ms-linear-gradient(top,  #fafafa 100%,#d4d4d4 0%); /* IE10+ */
+			background: linear-gradient(top,  #fafafa 100%,#d4d4d4 0%); /* W3C */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#d4d4d4', endColorstr='#fafafa',GradientType=0 ); /* IE6-9 */
 }
 input.ui-slider-input {
 	display: none !important;
@@ -185,43 +243,6 @@ div.ui-btn .ui-btn-inner {
 		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b0bccd', endColorstr='#6d84a2',GradientType=0 ); /* IE6-9 */
 }
 
-
-/* === PAGE BUTTON === */
-.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) {
-	padding: 0;
-	background: #FFF !important;
-	border: 1px solid #bbbbbb;
-	border-radius: 10px;
-	box-shadow: none;
-	background-clip: padding-box;
-}
-.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner {
-	background: #FFF !important;
-	box-shadow: none;
-}
-
-.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-inner .ui-collapsible-heading-toggle{
-	background: none;
-	padding: 15px 0 !important;
-}
-
-.ui-page:not(.ui-dialog) .ui-content .ui-btn:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) .ui-btn-text {
-	font-weight: bold;
-	font-size: 17px;
-	color: #000;
-	text-shadow: none;
-}
-.ui-page:not(.ui-dialog) .ui-content .ui-btn.ui-disabled:not(.ui-slider-handle):not(label):not(li):not(.ui-btn-left):not(.ui-btn-right):not(.ui-input-clear) {
-	opacity: 1;
-}
-.ui-btn[disabled] {
-	cursor: default;
-}
-.ui-btn[disabled] .ui-btn-text, .ui-btn.ui-disabled .ui-btn-text {
-	color: #aaaaaa !important;
-}
-
-
 .ui-dialog {
 	background: rgba(0, 0, 0, 0.6) none !important;
 	margin: 0;
@@ -229,13 +250,14 @@ div.ui-btn .ui-btn-inner {
 .ui-dialog .ui-dialog-contain {
 	max-width: 100%;
 	width: 100%;
+	position: static;
 }
 .ui-dialog .ui-content {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
 	max-width: 100%; /* fixes issue #24 */
-	padding: 0.75em 0;
+	padding: 0.75em;
 	margin: 0;
 	border-top: 1px solid #45484d;
 		background: #a8b1bd; /* Old browsers */
@@ -252,6 +274,9 @@ div.ui-btn .ui-btn-inner {
 				-webkit-box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
 				-moz-box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
 				box-shadow: 0 1px 0 rgba(255,255,255,0.3) inset;
+					-webkit-box-sizing: border-box;
+					-moz-box-sizing: border-box;
+					box-sizing: border-box;
 }
 
 .ui-dialog .ui-btn { 
@@ -638,6 +663,32 @@ input.ui-input-text, .ui-input-search {
 		#tabC.ui-btn-active .ui-icon {
 			background: url(images/tabSprite.png) -32px -64px no-repeat;
 		}
+
+/* === UI POPUPS === */
+.ui-popup {
+	background: rgba(0,0,0,0.75);
+	color: #FFF;
+		-webkit-box-shadow: none;
+		-moz-box-shadow: none;
+		box-shadow: none;
+}
+.ui-popup p {
+	color: #FFF;
+	text-shadow: none;
+}
+.ui-popup.ui-body-a {
+	width: 150px;
+	height: 150px;
+}
+.ui-popup.ui-body-a img {
+	margin: 30px auto 20px auto;
+	display: block;
+}
+.ui-popup.ui-body-a p {
+	text-align: center;
+	font-size: 1.1em;
+	font-weight: bold;
+}
 		
 		
 /* === RETINA DEVICE FIXES === */
