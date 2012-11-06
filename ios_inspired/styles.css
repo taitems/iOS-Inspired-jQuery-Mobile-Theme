@@ -42,11 +42,19 @@
 .ui-btn.ui-btn-plain[disabled] {
 	cursor: default;
 }
-.ui-btn.ui-btn-plain[disabled] span, .ui-btn.ui-disabled span {
+.ui-btn.ui-btn-plain[disabled].ui-btn-down-c .ui-btn-inner {
+	background: #FFF;
+}
+
+.ui-btn.ui-btn-plain[disabled] span, 
+.ui-btn.ui-disabled span,
+.ui-btn.ui-btn-plain[disabled].ui-btn-down-c span, 
+.ui-btn.ui-disabled.ui-btn-down-c span {
 	color: #aaaaaa;
 }
 	/* button active */
-	.ui-btn.ui-btn-plain.ui-btn-down-c .ui-btn-inner {
+	.ui-btn.ui-btn-plain.ui-btn-down-c .ui-btn-inner,
+	.ui-btn.ui-btn-plain.ui-btn-active .ui-btn-inner {
 		background: #008bf5; /* Old browsers */
 		background: -moz-linear-gradient(top,  #008bf5 0%, #0f5be6 100%); /* FF3.6+ */
 		background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#008bf5), color-stop(100%,#0f5be6)); /* Chrome,Safari4+ */
